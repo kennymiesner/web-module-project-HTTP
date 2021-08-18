@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react'
 
-import MovieListItem from './MovieListItem';
-import MovieFooter from './MovieFooter';
-import FavoriteMovieList from './FavoriteMovieList';
+import MovieListItem from './MovieListItem'
+import MovieFooter from './MovieFooter'
+import FavoriteMovieList from './FavoriteMovieList'
 
-const MovieList = (props)=> {
-    const { movies, favoriteMovies } = props;
+const MovieList = (props) => {
+    const { movies, favoriteMovies } = props
 
     return (
         <div className="col">
@@ -28,7 +28,7 @@ const MovieList = (props)=> {
             </table>
             <MovieFooter totalMovies={movies.length}/>
         </div>
-    );
+    )
 }
 
-export default MovieList;
+export default MovieList
