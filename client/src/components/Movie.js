@@ -11,12 +11,12 @@ const Movie = (props) => {
     const { id } = useParams()
     const { push } = useHistory()
 
-    useEffect(()=>{
+    useEffect(() => {
         axios.get(`http://localhost:5000/api/movies/${id}`)
-            .then(res=>{
+            .then(res=> {
                 setMovie(res.data)
             })
-            .catch(err=>{
+            .catch(err=> {
                 console.log(err.response)
             })
     }, [id])

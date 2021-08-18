@@ -4,7 +4,7 @@ import MovieListItem from './MovieListItem'
 import MovieFooter from './MovieFooter'
 import FavoriteMovieList from './FavoriteMovieList'
 
-const MovieList = (props)=> {
+const MovieList = (props) => {
     const { movies, favoriteMovies } = props
 
     return (

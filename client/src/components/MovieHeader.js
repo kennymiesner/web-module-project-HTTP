@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const MovieHeader = ()=> {
+const MovieHeader = () => {
     return(<div className="table-title">
         <div className="row">
         <div className="col-sm-6">

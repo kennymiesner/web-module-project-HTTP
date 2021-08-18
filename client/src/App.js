@@ -15,7 +15,7 @@ const App = (props) => {
   const [movies, setMovies] = useState([])
   const [favoriteMovies, setFavoriteMovies] = useState([])
 
-  useEffect(()=>{
+  useEffect(() => {
     axios.get('http://localhost:5000/api/movies')
       .then(res => {
         setMovies(res.data)
@@ -25,7 +25,8 @@ const App = (props) => {
       })
   }, [])
 
-  const deleteMovie = (id)=> {
+  const deleteMovie = (id) => {
+    
   }
 
   const addToFavorites = (movie) => {
@@ -45,6 +46,7 @@ const App = (props) => {
         
           <Switch>
             <Route path="/movies/edit/:id">
+              <EditMovieForm setMovies={setMovies}/>
             </Route>
 
             <Route path="/movies/:id">
