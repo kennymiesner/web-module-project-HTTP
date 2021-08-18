@@ -1,29 +1,29 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 
-import { Route, Switch, Redirect } from "react-router-dom";
-import MovieList from './components/MovieList';
-import Movie from './components/Movie';
+import { Route, Switch, Redirect } from "react-router-dom"
+import MovieList from './components/MovieList'
+import Movie from './components/Movie'
 
-import MovieHeader from './components/MovieHeader';
+import MovieHeader from './components/MovieHeader'
 
-import EditMovieForm from './components/EditMovieForm';
-import FavoriteMovieList from './components/FavoriteMovieList';
+import EditMovieForm from './components/EditMovieForm'
+import FavoriteMovieList from './components/FavoriteMovieList'
 
-import axios from 'axios';
+import axios from 'axios'
 
 const App = (props) => {
-  const [movies, setMovies] = useState([]);
-  const [favoriteMovies, setFavoriteMovies] = useState([]);
+  const [movies, setMovies] = useState([])
+  const [favoriteMovies, setFavoriteMovies] = useState([])
 
   useEffect(()=>{
     axios.get('http://localhost:5000/api/movies')
       .then(res => {
-        setMovies(res.data);
+        setMovies(res.data)
       })
       .catch(err => {
-        console.log(err);
-      });
-  }, []);
+        console.log(err)
+      })
+  }, [])
 
   const deleteMovie = (id)=> {
   }
@@ -62,9 +62,9 @@ const App = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
 
-export default App;
+export default App
 
