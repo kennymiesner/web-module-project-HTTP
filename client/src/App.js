@@ -9,6 +9,7 @@ import MovieHeader from './components/MovieHeader'
 import EditMovieForm from './components/EditMovieForm'
 import AddMovieForm from './components/AddMovieForm'
 import FavoriteMovieList from './components/FavoriteMovieList'
+import DeleteMovieModal from './components/DeleteMovieModal'
 
 import axios from 'axios'
 
@@ -30,16 +31,6 @@ const App = (props) => {
     axios.delete(`http://localhost:5000/api/movies/${id}`)
       .then(res => {
         setMovies(movies.filter(item => item.id !== res.data))
-      })
-      .catch(err => {
-        console.log(err)
-      })
-  }
-
-  const addMovie = (id) => {
-    axios.put(`http://localhost:5000/api/movies/${id}`)
-      .then(res => {
-        setMovies(res.data)
       })
       .catch(err => {
         console.log(err)
